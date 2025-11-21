@@ -26,7 +26,7 @@ namespace ContractMonthlyClaimSystem
             InitializeComponent();
         }
 
-        // --- View Launch Methods ---
+        // View Launch Methods
         // Part 2: NEW Codes
         private void LaunchLecturerView_Click(object sender, RoutedEventArgs e)
         {
@@ -44,7 +44,7 @@ namespace ContractMonthlyClaimSystem
 
         private void LaunchManagerView_Click(object sender, RoutedEventArgs e)
         {
-            // Create and show the ManagerView
+            // Creates and shows the ManagerView
             ManagerView managerView = new ManagerView();
             managerView.Show();
             this.Close(); // Close the main selection window
@@ -52,7 +52,7 @@ namespace ContractMonthlyClaimSystem
 
         private void LaunchHRView_Click(object sender, RoutedEventArgs e)
         {
-            // Create and show the HRView
+            // Creates and shows the HRView
             HRView hrView = new HRView();
             hrView.Show();
             this.Close(); // Close the main selection window

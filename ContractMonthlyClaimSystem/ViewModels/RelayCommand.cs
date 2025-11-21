@@ -12,19 +12,18 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Snesh Prajapati
         // https://www.codeproject.com/search?editorId=9373265
 
+        // Part 2
         // Action<object> delegate points to the method in the ViewModel.
         private readonly Action<object> _execute;
 
         // Func<object, bool> delegate returns true if the command is enabled, otherwise false.
         private readonly Func<object, bool> _canExecute;
 
-        // Part 2: NEW Code
         private readonly Func<object, Task> _executeAsync;
 
         public event EventHandler CanExecuteChanged
         {
-            // The add accessor subscribes to CommandManager.RequerySuggested
-            // This event is raised automatically by WPF in response to various user actions
+            // The add accessor subscribes to the event handler.
             add { CommandManager.RequerySuggested += value; }
             // The remove accessor unsubscribes the event handler.
             remove { CommandManager.RequerySuggested -= value; }
@@ -43,7 +42,8 @@ namespace ContractMonthlyClaimSystem.ViewModels
             _canExecute = canExecute;
         }
 
-        // Part 3: NEW Code - Constructor for asynchronous commands (Task)
+        // Part 3: NEW Code
+        // Constructor for asynchronous commands
         public RelayCommand(Func<object, Task> executeAsync, Func<object, bool> canExecute = null)
         {
             _executeAsync = executeAsync ?? throw new ArgumentNullException(nameof(executeAsync));
@@ -57,7 +57,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             return _canExecute == null || _canExecute(parameter);
         }
 
-        // Part 2: UPDATED Code
+        // Part 2
         // This method is called when the command is invoked
         public async void Execute(object parameter)
         {
@@ -71,7 +71,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // Part 2: NEW Code
+        // Part 2
         // Public method to force re-evaluation of CanExecute
         public void RaiseCanExecuteChanged()
         {

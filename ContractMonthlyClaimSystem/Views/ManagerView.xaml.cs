@@ -25,25 +25,24 @@ namespace ContractMonthlyClaimSystem.Views
         {
             InitializeComponent();
 
-            // 1. Instantiate the ClaimService dependency
-            // NOTE: You must ensure ClaimService is in the ContractMonthlyClaimSystem.Services namespace.
+            // Instantiates the ClaimService dependency
             var claimService = new ClaimService();
 
-            // 2. Instantiate the ManagerViewModel
+            // Instantiates the ManagerViewModel
             var viewModel = new ManagerViewModel();
 
-            // 3. Set the ViewModel as the DataContext
+            // Sets the ViewModel as the DataContext
             this.DataContext = viewModel;
 
-            // 4. Subscribe to the RequestClose event from the ViewModelBase.
-            // This allows the ViewModel (e.g., GoHomeCommand) to trigger the View to close itself.
+            // Subscribes to the RequestClose event from the ViewModelBase.
+            // This allows the ViewModel to trigger the View to close itself.
             viewModel.RequestClose += (sender, e) =>
             {
-                // 1. Open the main selection window
+                // Opens the main selection window
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
 
-                // 2. Close the current ManagerView window
+                // Closes the current ManagerView window
                 this.Close();
             };
         }

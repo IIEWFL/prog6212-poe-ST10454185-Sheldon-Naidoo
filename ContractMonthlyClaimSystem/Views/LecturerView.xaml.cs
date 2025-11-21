@@ -24,7 +24,7 @@ namespace ContractMonthlyClaimSystem.Views
         {
             InitializeComponent();
 
-            // Part 2: NEW Code
+            // Part 2
             // Ensures the DataContext is set and the ViewModel is the correct type
             if (this.DataContext is LecturerViewModel viewModel)
             {
@@ -33,7 +33,7 @@ namespace ContractMonthlyClaimSystem.Views
                 {
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
-                    this.Close(); // Closes the LecturerView window
+                    this.Close();
                 };
             }
         }

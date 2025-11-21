@@ -11,7 +11,7 @@
     </Window.DataContext>
 
     <Window.Resources>
-        <!-- Approve Button (Button Styles) -->
+        <!-- Approve Button -->
         <Style x:Key="ApproveButton" TargetType="Button">
             <Setter Property="Background" Value="#27AE60"/>
             <Setter Property="Foreground" Value="White"/>
@@ -31,7 +31,7 @@
             </Setter>
         </Style>
 
-        <!-- Reject Button (Button Styles) -->
+        <!-- Reject Button -->
         <Style x:Key="RejectButton" TargetType="Button">
             <Setter Property="Background" Value="#E74C3C"/>
             <Setter Property="Foreground" Value="White"/>
@@ -51,7 +51,7 @@
             </Setter>
         </Style>
 
-        <!-- Navigation Button (Styles) -->
+        <!-- Navigation Button -->
         <Style x:Key="HomeButton" TargetType="Button">
             <Setter Property="Background" Value="#3498DB"/>
             <Setter Property="Foreground" Value="White"/>
@@ -73,7 +73,7 @@
     </Window.Resources>
 
     <Grid Margin="20">
-        <!-- Main Grid Rows: Header and Content -->
+        <!-- Main Grid Rows -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>    
@@ -88,7 +88,7 @@
                     Style="{StaticResource HomeButton}"/>
         </Grid>
 
-        <!-- Main Content Grid (Split into 2 columns) -->
+        <!-- Main Content Grid -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/> 

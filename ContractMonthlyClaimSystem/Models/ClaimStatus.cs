@@ -16,7 +16,7 @@ namespace ContractMonthlyClaimSystem.Models
         [Required]
         public string StatusName { get; set; }
 
-        // NEW
+        // NEW Code
         public virtual ICollection<Claims> Claims { get; set; }
     }
 }

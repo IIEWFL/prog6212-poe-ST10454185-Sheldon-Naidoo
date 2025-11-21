@@ -11,9 +11,10 @@ using System.Windows;
 
 namespace ContractMonthlyClaimSystem.ViewModels
 {
+    // PART 3: NEW Code
     public class ManagerViewModel : ViewModelBase
     {
-        // Action delegate to close the Window (for navigation back to Main Menu)
+        // Action delegate to close the Window
         public Action CloseWindowAction { get; set; }
 
         private readonly ClaimService claimService;
@@ -30,7 +31,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             {
                 _allClaims = value;
                 OnPropertyChanged();
-                // Automatically update the filtered list when the main list changes
+                // Automatically updates the filtered list when the main list changes
                 FilterClaims();
             }
         }
@@ -47,7 +48,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // --- Filtering/Search Properties ---
+        // Filtering/Search Properties
         private string _searchText;
         public string SearchText
         {
@@ -72,7 +73,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // --- Detail View Properties ---
+        // Detail View Properties
 
         private Claims _selectedClaim;
         public Claims SelectedClaim
@@ -82,14 +83,14 @@ namespace ContractMonthlyClaimSystem.ViewModels
             {
                 _selectedClaim = value;
                 OnPropertyChanged();
-                // Load details when a claim is selected
+                // Loads details when a claim is selected
                 if (value != null)
                 {
                     Task.Run(LoadClaimDetailsAsync);
                 }
                 else
                 {
-                    // Clear details if selection is cleared
+                    // Clears details if selection is cleared
                     ClaimHours = null;
                     ClaimDocuments = null;
                 }
@@ -114,8 +115,8 @@ namespace ContractMonthlyClaimSystem.ViewModels
             set { _claimDocuments = value; OnPropertyChanged(); }
         }
 
-        // PART 3
-        // --- Commands ---
+        // PART 3: NEW Code
+        // Command Properties
         public ICommand LoadClaimsCommand { get; }
         public ICommand ApproveClaimCommand => _approveClaimCommand;
         public ICommand RejectClaimCommand => _rejectClaimCommand;
@@ -130,51 +131,47 @@ namespace ContractMonthlyClaimSystem.ViewModels
             _allClaims = new ObservableCollection<Claims>();
             _filteredClaims = new ObservableCollection<Claims>();
 
-            // Initialize commands
+            // Initializes commands
             LoadClaimsCommand = new RelayCommand(async _ => await LoadAllClaimsAsync());
 
-            // Approve/Reject commands can only execute if a claim is selected AND it is currently pending review (StatusID = 3)
+            // Approve/Reject commands can only execute if a claim is selected AND it is currently pending review
             _approveClaimCommand = new RelayCommand(async _ => await UpdateClaimStatusAsync(4, "Approved"),
                 _ => SelectedClaim != null && SelectedClaim.StatusID == 3);
 
             _rejectClaimCommand = new RelayCommand(async _ => await UpdateClaimStatusAsync(2, "Rejected"),
                 _ => SelectedClaim != null && SelectedClaim.StatusID == 3);
 
-            // Verify command can run if a claim is selected
+            // Verifies commands run if a claim is selected
             _verifyClaimCommand = new RelayCommand(async _ => await ExecuteVerifyClaimAsync(),
                 _ => SelectedClaim != null);
 
             GoHomeCommand = new RelayCommand(_ => CloseView());
 
-            // Load claims on startup
+            // Loads claims on startup
             Task.Run(LoadAllClaimsAsync);
         }
 
-        // --- Core Methods ---
+        // Core Methods
 
         private void ExecuteGoHome()
         {
             CloseWindowAction?.Invoke();
         }
 
-        // Loads all claims from the service (or claims relevant to the manager's role)
+        // PART 3: NEW Code
+        // Loads all claims from the service
         private async Task LoadAllClaimsAsync()
         {
             try
             {
-                // In a real application, this would fetch claims based on the manager's department/role.
-                // For now, we fetch ALL claims.
                 var claimsList = await claimService.GetAllClaims();
 
-                // Fetch lecturer names for display in the grid
+                // Fetches lecturer names for display in the grid
                 foreach (var claim in claimsList)
                 {
-                    // Assuming you have a GetLecturerById method
                     var lecturer = await claimService.GetLecturerById(claim.LecturerID);
-                    // Add a property to Claims model (e.g., LecturerFullName) for this to work in XAML
-                    // claim.LecturerFullName = lecturer?.FullName ?? "Unknown Lecturer"; 
 
-                    // Recalculate Total Amount (Important for consistency)
+                    // Recalculates Total Amount
                     decimal rate = lecturer?.HourlyRate ?? 500.00m;
                     claim.TotalAmount = (await claimService.GetHoursWorkedByClaim(claim.ClaimID)).Sum(h => (decimal)h.Hours) * rate;
                 }
@@ -190,6 +187,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
+        // PART 3: NEW Code
         // Filters the claims based on the current search text and status ID
         private void FilterClaims()
         {
@@ -197,20 +195,18 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
             var filtered = AllClaims.AsEnumerable();
 
-            // 1. Filter by Status
+            // Filters by Status
             if (SelectedStatusId.HasValue && SelectedStatusId.Value > 0)
             {
                 filtered = filtered.Where(c => c.StatusID == SelectedStatusId.Value);
             }
 
-            // 2. Filter by Search Text (e.g., Lecturer Name, Claim ID, Month/Year)
+            // Filters by Search Text
             if (!string.IsNullOrWhiteSpace(SearchText))
             {
                 string searchLower = SearchText.ToLower();
                 filtered = filtered.Where(c =>
                     c.ClaimID.ToString().Contains(searchLower) ||
-                    // You'll need to update the Claims model to include LecturerFullName
-                    // c.LecturerFullName.ToLower().Contains(searchLower) || 
                     c.Month.ToString().Contains(searchLower) ||
                     c.Year.ToString().Contains(searchLower)
                 );
@@ -219,6 +215,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             FilteredClaims = new ObservableCollection<Claims>(filtered);
         }
 
+        // PART 3: NEW Code
         // Loads the detailed hours and documents for the selected claim
         private async Task LoadClaimDetailsAsync()
         {
@@ -241,7 +238,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // PART 3
+        // PART 3: NEW Code
         // Saves the manager's verification notes and status
         private async Task ExecuteVerifyClaimAsync()
         {
@@ -249,7 +246,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
             try
             {
-                // Note: SelectedClaim.IsVerified and SelectedClaim.VerificationNotes are bound directly to the UI fields
+                // SelectedClaim.IsVerified and SelectedClaim.VerificationNotes are bound directly to the UI fields
                 bool success = await claimService.UpdateClaimVerificationDetails(
                     SelectedClaim.ClaimID,
                     SelectedClaim.IsVerified,
@@ -267,6 +264,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
+        // PART 3: NEW Code
         // Updates the status of the selected claim (4 for Approved, 2 for Rejected)
         private async Task UpdateClaimStatusAsync(int newStatusId, string statusName)
         {
@@ -280,13 +278,13 @@ namespace ContractMonthlyClaimSystem.ViewModels
                 {
                     System.Windows.MessageBox.Show($"Claim {SelectedClaim.ClaimID} has been successfully {statusName}.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                    // Force UI update and reload the list
+                    // Forces UI update and reload the list
                     SelectedClaim.StatusID = newStatusId;
                     SelectedClaim.StatusName = await claimService.GetStatusNameById(newStatusId);
 
                     await LoadAllClaimsAsync();
 
-                    // Clear the selection after action
+                    // Clears the selection after action
                     SelectedClaim = null;
                 }
                 else

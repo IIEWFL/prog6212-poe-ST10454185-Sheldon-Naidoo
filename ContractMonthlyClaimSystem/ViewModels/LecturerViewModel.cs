@@ -20,14 +20,14 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/how-to-implement-property-change-notification
         // Microsoft Learn
 
-        // Part 2: NEW Code
+        // Part 2
         // Action delegate to close the Window in the LecturerView
         public Action CloseWindowAction { get; set; }
 
         private readonly ClaimService claimService;
 
-        // NEW
-        // --- Lecturer Data ---
+        // Part 3: UPDATED Code
+        // Lecturer Data
         private Lecturer _currentLecturer;
         public Lecturer CurrentLecturer
         {
@@ -50,14 +50,14 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // NEW
-        // --- New Claim Submission Data ---
+        // Part 3: NEW Code
+        // New Claim Submission Data
 
-        // NEW: Uses a list of DTOs (HoursWorkedSubmission) instead of the database model (HoursWorked)
+        // Lists of Collections
         public ObservableCollection<HoursWorkedSubmission> CurrentHours { get; set; } = new ObservableCollection<HoursWorkedSubmission>();
         public ObservableCollection<SupportingDocument> CurrentDocuments { get; set; } = new ObservableCollection<SupportingDocument>();
 
-        // NEW: Property to bind to the fields for adding a new single entry
+        // Properties to bind to the fields for adding a new single entry
         private HoursWorkedSubmission _newHourEntry = new HoursWorkedSubmission { DateWorked = DateTime.Today, Hours = 1.0, Description = "" };
         public HoursWorkedSubmission NewHourEntry
         {
@@ -83,18 +83,18 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // ICommand properties for UI buttons. These are bound to methods that handle user actions.
+        // ICommand properties
         public ICommand AddHoursCommand { get; }
-        public ICommand RemoveHoursCommand { get; } // NEW
+        public ICommand RemoveHoursCommand { get; }
         public ICommand SubmitClaimCommand { get; }
         public ICommand LoadClaimsCommand { get; }
 
-        // Part 2: NEW Code
-        // New commands properties for uploading documents and the main menu button
+        // Part 2
+        // Commands properties for uploading documents and the main menu button
         public ICommand UploadDocumentCommand { get; }
         public ICommand GoHomeCommand { get; }
 
-        // Part 2: UPDATED Code
+        // Part 2
         // Constructor for ViewModel
         public LecturerViewModel()
         {
@@ -122,7 +122,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             Task.Run(LoadClaimsAsync);
         }
 
-        // Part 2: NEW Code
+        // Part 2
         // Method that executes the logic for the "Back to Main Menu" button.
         private void ExecuteGoHome()
         {
@@ -130,7 +130,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             CloseWindowAction?.Invoke();
         }
 
-        // Part 2: UPDATED Code
+        // Part 2
         // Asynchronous method to load claims from the ClaimService.
         private async Task LoadClaimsAsync()
         {
@@ -141,17 +141,16 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
             try
             {
-                // 1. Get Lecturer Data (Crucial for Hourly Rate)
-                // Assuming lecturer ID 1 for mock purposes, but this should ideally come from an authentication service.
+                // Retrieves Lecturer Data
                 CurrentLecturer = await claimService.GetCurrentLecturer();
 
-                // 2. Load Claim History
+                // Loads Claim History
                 var claimsList = await claimService.GetClaimsByLecturer(CurrentLecturer?.LecturerID ?? 1);
 
                 // Loops through the claims to calculate and set the total amount for each.
                 foreach (var claim in claimsList)
                 {
-                    // Use the actual hourly rate if available, otherwise default to the hardcoded rate (500.00m)
+                    // Uses the actual hourly rate if available
                     decimal rate = CurrentLecturer?.HourlyRate ?? 500.00m;
                     claim.TotalAmount = (await claimService.GetHoursWorkedByClaim(claim.ClaimID)).Sum(h => (decimal)h.Hours) * rate;
                 }
@@ -169,17 +168,17 @@ namespace ContractMonthlyClaimSystem.ViewModels
         }
 
         // Part 3: UPDATED Code
-        // NEW: Method to add a single hours-worked entry based on NewHourEntry fields.
+        // This method adds a single hours-worked entry based on NewHourEntry fields.
         private void AddHourEntry()
         {
-            // Simple validation check before adding
+            // Simple validation to check before adding
             if (NewHourEntry.Hours <= 0 || string.IsNullOrWhiteSpace(NewHourEntry.Description))
             {
                 MessageBox.Show("Please ensure hours are greater than zero and a description is provided.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Create a copy of the entry to add (to prevent modifying the item in the list when updating NewHourEntry)
+            // Creates a copy of the entry to add
             var hourToAdd = new HoursWorkedSubmission
             {
                 DateWorked = NewHourEntry.DateWorked,
@@ -192,24 +191,26 @@ namespace ContractMonthlyClaimSystem.ViewModels
             // Recalculates total amount when hours are added
             CalculateTotalAmount();
 
-            // Reset the input fields for the next entry
+            // Resets the input fields for the next entry
             NewHourEntry = new HoursWorkedSubmission { DateWorked = DateTime.Today, Hours = 1.0, Description = "" };
         }
 
-        // NEW: Logic to determine if an hour entry can be added (optional)
+        // Part 3: NEW Code
+        // Logic to determine if an hour entry can be added
         private bool CanAddHourEntry()
         {
             // Perform basic checks on the input fields for NewHourEntry here if desired
             return true;
         }
 
-        // NEW: Method to remove a selected hours-worked entry.
+        // Part 3: NEW Code
+        // Method that removes selected hours-worked entries.
         private void RemoveHourEntry(object parameter)
         {
             if (parameter is HoursWorkedSubmission entryToRemove)
             {
                 CurrentHours.Remove(entryToRemove);
-                CalculateTotalAmount(); // Recalculate after removal
+                CalculateTotalAmount();
             }
         }
 
@@ -217,14 +218,14 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Helper method to recalculate total amount
         private void CalculateTotalAmount()
         {
-            // Use the lecturer's actual hourly rate from the loaded model
+            // Uses the lecturer's actual hourly rate from the loaded model
             decimal rate = CurrentLecturer?.HourlyRate ?? 500.00m;
 
-            // Sum all hours in the submission list
+            // Sums all hours in the submission list
             TotalAmount = CurrentHours.Sum(h => (decimal)h.Hours) * rate;
         }
 
-        // Part 2: NEW Code
+        // Part 2
         // Method that uses dummy data for uploading a document
         private void UploadDocument()
         {
@@ -269,7 +270,6 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
             try
             {
-                // Convert DTOs back to the database model (HoursWorked) for the service layer
                 var hoursWorkedList = CurrentHours.Select(h => new HoursWorked
                 {
                     DateWorked = h.DateWorked,
@@ -279,7 +279,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
                 var newClaim = new Claims
                 {
-                    LecturerID = CurrentLecturer.LecturerID, // Use actual Lecturer ID
+                    LecturerID = CurrentLecturer.LecturerID, 
                     Month = SelectedMonth,
                     Year = SelectedYear,
                     SubmissionDate = DateTime.Now,
@@ -293,12 +293,12 @@ namespace ContractMonthlyClaimSystem.ViewModels
                 {
                     System.Windows.MessageBox.Show("Claim submitted successfully for review!", "Success", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
 
-                    // Clear submission data and reset total
+                    // Clears submission data and reset total
                     CurrentHours.Clear();
                     CurrentDocuments.Clear();
                     TotalAmount = 0.00m;
 
-                    // Reload the history to show the newly submitted claim
+                    // Reloads the history to show the newly submitted claim
                     await LoadClaimsAsync();
                 }
                 else
@@ -313,8 +313,8 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // PART 3
-        // NEW: Logic to check if submission is possible
+        // PART 3: NEW Code
+        // Logic to check if submission is possible
         private bool CanSubmitClaim()
         {
             bool hasHours = CurrentHours.Any() && CurrentHours.All(h => h.Hours > 0 && !string.IsNullOrWhiteSpace(h.Description));
@@ -328,8 +328,9 @@ namespace ContractMonthlyClaimSystem.ViewModels
         }
     }
 
-    // NEW CLASS: Data Transfer Object (DTO) for collecting hour submissions, decoupled from the DB model.
-    // It also inherits from ViewModelBase to enable two-way binding and validation feedback in the UI.
+    // PART 3: NEW Code
+    // New Class
+    // Inherits from ViewModelBase to enable two-way binding and validation feedback in the UI.
     public class HoursWorkedSubmission : ViewModelBase
     {
         private DateTime _dateWorked = DateTime.Today;

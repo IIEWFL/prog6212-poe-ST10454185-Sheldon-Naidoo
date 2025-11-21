@@ -24,7 +24,7 @@ namespace ContractMonthlyClaimSystem.Models
         public double Hours { get; set; }
         public string Description { get; set; }
 
-        // NEW
+        // NEW Code
         public virtual Claims Claim { get; set; }
     }
 }

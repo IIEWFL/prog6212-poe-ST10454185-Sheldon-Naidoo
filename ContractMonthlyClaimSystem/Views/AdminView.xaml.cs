@@ -24,7 +24,7 @@ namespace ContractMonthlyClaimSystem.Views
         {
             InitializeComponent();
 
-            // Part 2: NEW Code
+            // Part 2
             // Retrieves a reference to the ViewModel
             if (this.DataContext is AdminViewModel viewModel)
             {
@@ -33,7 +33,7 @@ namespace ContractMonthlyClaimSystem.Views
                 {
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
-                    this.Close(); // The View closes itself
+                    this.Close(); 
                 };
             }
         }

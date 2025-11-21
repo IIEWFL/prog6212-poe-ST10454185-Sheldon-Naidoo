@@ -36,17 +36,16 @@ namespace ContractMonthlyClaimSystem.Services
             claimStatusList.Add(new ClaimStatus { StatusID = 4, StatusName = "Approved" });
             claimStatusList.Add(new ClaimStatus { StatusID = 5, StatusName = "Completed/Paid" });
 
-            // Part 2: NEW Code
             SetupMockClaims();
         }
 
-        // NEW METHOD: Fixes CS1061 error by defining the required method
+        // Part 3: NEW Code
         public async Task<List<ClaimStatus>> GetAllStatuses()
         {
             return await Task.FromResult(claimStatusList.ToList());
         }
 
-        // Part 2: NEW Code
+        // Part 3: UPDATE Code
         private void SetupMockClaims()
         {
             // Code Attribution
@@ -55,7 +54,7 @@ namespace ContractMonthlyClaimSystem.Services
             // Captain Iminza
             // https://dev.to/dianaiminza
 
-            // --- First Claim: Pending Review ---
+            // First Claim: Pending Review
             var claim1 = new Claims
             {
                 ClaimID = 1,
@@ -73,7 +72,7 @@ namespace ContractMonthlyClaimSystem.Services
             documentsList.Add(new SupportingDocument { DocumentID = 1, ClaimID = 1, FileName = "Attendance_Oct_1.pdf", FilePath = "fake/path" });
             documentsList.Add(new SupportingDocument { DocumentID = 2, ClaimID = 1, FileName = "Teaching_Log_Oct.docx", FilePath = "fake/path" });
 
-            // --- Second Claim: Approved ---
+            // Second Claim: Approved
             var claim2 = new Claims
             {
                 ClaimID = 2,
@@ -90,7 +89,7 @@ namespace ContractMonthlyClaimSystem.Services
             hoursWorkedList.Add(new HoursWorked { HoursWorkedID = 103, ClaimID = 2, DateWorked = new DateTime(2025, 9, 15), Hours = 15, Description = "Seminar Prep" });
             hoursWorkedList.Add(new HoursWorked { HoursWorkedID = 104, ClaimID = 2, DateWorked = new DateTime(2025, 9, 20), Hours = 5, Description = "Student Consultation" });
 
-            // --- Third Claim (Lecturer 1): Rejected ---
+            // Third Claim: Rejected
             var claim3 = new Claims
             {
                 ClaimID = 3,
@@ -105,22 +104,22 @@ namespace ContractMonthlyClaimSystem.Services
         }
 
         // Part 3: NEW Code
-        // Method to retrieve the details of the currently logged-in lecturer.
+        // This method retrieves the details of the currently logged-in lecturer.
         public async Task<Lecturer> GetCurrentLecturer()
         {
             return await Task.FromResult(lecturersList.FirstOrDefault(l => l.LecturerID == currentLoggedInLecturerID));
         }
 
         // Part 2
-        // Helper method to get status ID consistently
+        // This helper method is used to get status ID consistently
         private int GetStatusIdByName(string statusName)
         {
             // Default to 1 (Submitted) if not found
             return claimStatusList.FirstOrDefault(s => s.StatusName.Equals(statusName, StringComparison.OrdinalIgnoreCase))?.StatusID ?? 1;
         }
 
-        // Part 3: UPDATE CODE
-        // Method to retrieve all claims for a specific lecturer
+        // Part 3: UPDATE Code
+        // This method retrieves all claims for a specific lecturer
         public async Task<List<Claims>> GetClaimsByLecturer(int v)
         {
             // Code Attribution
@@ -128,10 +127,10 @@ namespace ContractMonthlyClaimSystem.Services
             // https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.fromresult?view=net-9.0
             // Microsoft Learn
 
-            // Use the mock logged-in ID
+            // Uses the mock logged-in ID
             var lecturerClaims = claimsList.Where(c => c.LecturerID == currentLoggedInLecturerID).ToList();
 
-            // Enhance claims with display data
+            // Enhances the claims with display data
             var lecturer = lecturersList.FirstOrDefault(l => l.LecturerID == currentLoggedInLecturerID);
             var lecturerName = $"{lecturer?.FirstName} {lecturer?.LastName}";
 
@@ -145,14 +144,14 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(lecturerClaims);
         }
 
-        // Part 2: UPDATED Code
-        // Method to retrieve all claims for pending review statuses
+        // Part 2
+        // This method retrieves all claims for pending review statuses
         public async Task<List<Claims>> GetAllPendingClaims()
         {
-            // Gets claims with StatusID = 3 (Pending Review)
+            // Retrieves claims with StatusID = 3 (Pending Review)
             var pendingClaims = claimsList.Where(c => c.StatusID == 3).ToList();
 
-            // Populate LecturerName and MonthYearDisplay for AdminViewModel's DataGrid
+            // Populates LecturerName and MonthYearDisplay for AdminViewModel's DataGrid
             foreach (var claim in pendingClaims)
             {
                 var lecturer = lecturersList.FirstOrDefault(l => l.LecturerID == claim.LecturerID);
@@ -164,8 +163,8 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(pendingClaims);
         }
 
-        // Part 2: UPDATED Code
-        // Method that allows for submission of new claim along with its associated hours worked and documents.
+        // Part 2
+        // This method allows for submission of new claim along with its associated hours worked and documents.
         public async Task<int> SubmitNewClaim(Claims newClaim, List<HoursWorked> hours, List<SupportingDocument> documents)
         {
             // Code Attribution
@@ -179,22 +178,22 @@ namespace ContractMonthlyClaimSystem.Services
 
             var lecturer = lecturersList.FirstOrDefault(l => l.LecturerID == newClaim.LecturerID);
 
-            // Validation: Lecturer must exist
+            // Validation
             if (lecturer == null)
             {
                 throw new InvalidOperationException($"Lecturer ID {newClaim.LecturerID} not found.");
             }
 
             // Part 3: UPDATE CODE
-            // Automation
+            // Automation of final payment
             newClaim.TotalAmount = hours.Sum(h => (decimal)h.Hours) * lecturer.HourlyRate;
 
             claimsList.Add(newClaim);
 
-            // Link hours and documents to the new claim ID
+            // Links the hours and documents to the new claim ID
             hours.ForEach(h => {
                 h.ClaimID = newClaim.ClaimID;
-                // Assign new ID to HoursWorked item for uniqueness (WPF scenario)
+                // Assigns any new ID to HoursWorked items
                 h.HoursWorkedID = hoursWorkedList.Count > 0 ? hoursWorkedList.Max(hw => hw.HoursWorkedID) + 1 : 1;
                 hoursWorkedList.Add(h);
             });
@@ -209,14 +208,15 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(newClaim.ClaimID);
         }
 
-        // --- Manager/Coordinator Methods ---
+        // Manager/Coordinator Methods
 
-        // NEW: Method to retrieve ALL claims, used by the Manager View
+        // Part 3: NEW Code
+        // This method retrieves all claims, used by the Manager View
         public async Task<List<Claims>> GetAllClaims()
         {
             var allClaims = claimsList.ToList();
 
-            // Enhance claims with display data needed by the ManagerViewModel
+            // Enhances the claims with display data needed by the ManagerViewModel
             foreach (var claim in allClaims)
             {
                 var lecturer = lecturersList.FirstOrDefault(l => l.LecturerID == claim.LecturerID);
@@ -228,7 +228,7 @@ namespace ContractMonthlyClaimSystem.Services
                 claim.MonthYearDisplay = new DateTime(claim.Year, claim.Month, 1).ToString("MMMM yyyy");
                 claim.StatusName = await GetStatusNameById(claim.StatusID);
 
-                // Recalculate Total Amount just in case it was missed during submission
+                // Recalculates the Total Amount
                 decimal rate = lecturer?.HourlyRate ?? 0.00m;
                 claim.TotalAmount = hoursWorkedList.Where(h => h.ClaimID == claim.ClaimID).Sum(h => (decimal)h.Hours) * rate;
             }
@@ -236,14 +236,15 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(allClaims);
         }
 
-        // NEW: Method to retrieve a specific lecturer by ID
+        // Part 3: NEW Code
+        // This method retrieves a specific lecturer by ID
         public async Task<Lecturer> GetLecturerById(int lecturerId)
         {
             return await Task.FromResult(lecturersList.FirstOrDefault(l => l.LecturerID == lecturerId));
         }
 
-        // PART 3
-        // NEW: Method to update the manager's verification notes and status
+        // PART 3: NEW Code
+        // This method updates the manager's verification notes and status
         public async Task<bool> UpdateClaimVerificationDetails(int claimId, bool isVerified, string notes)
         {
             var claim = claimsList.FirstOrDefault(c => c.ClaimID == claimId);
@@ -259,7 +260,8 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(true);
         }
 
-        // OVERLOAD: Method that updates the claim status using the Status ID (preferred for Manager View)
+        // OVERLOAD Method
+        // This method updates the claim status using the Status ID
         public async Task<bool> UpdateClaimStatus(int claimId, int newStatusId)
         {
             var claim = claimsList.FirstOrDefault(c => c.ClaimID == claimId);
@@ -273,7 +275,7 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(true);
         }
 
-        // Method that updates the claim status
+        // This method updates the claim status
         public async Task<bool> UpdateClaimStatus(int claimId, string newStatusName)
         {
             // Code Attribution
@@ -301,7 +303,7 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(true);
         }
 
-        // Method to retrieve the hours worked for a specific claim.
+        // This method retrieves the hours worked for a specific claim.
         public async Task<List<HoursWorked>> GetHoursWorkedByClaim(int claimId)
         {
             // Code Attribution
@@ -312,13 +314,13 @@ namespace ContractMonthlyClaimSystem.Services
             return await Task.FromResult(hoursWorkedList.Where(h => h.ClaimID == claimId).ToList());
         }
 
-        // Method to retrieve the supporting documents for a specific claim.
+        // This method retrieves the supporting documents for a specific claim.
         public async Task<List<SupportingDocument>> GetDocumentsByClaim(int claimId)
         {
             return await Task.FromResult(documentsList.Where(d => d.ClaimID == claimId).ToList());
         }
 
-        // Method to retrieve the status name based on its ID.
+        // This method retrieves the status name based on its ID.
         public async Task<string> GetStatusNameById(int statusId)
         {
             return await Task.FromResult(claimStatusList.FirstOrDefault(s => s.StatusID == statusId)?.StatusName);

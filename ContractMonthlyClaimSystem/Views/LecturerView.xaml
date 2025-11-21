@@ -15,7 +15,7 @@
     </Window.DataContext>
 
     <Window.Resources>
-        <!-- Primary Button (Submit button styles) -->
+        <!-- Primary Button -->
         <Style x:Key="PrimaryButton" TargetType="Button">
             <Setter Property="Background" Value="#27AE60"/>
             <Setter Property="Foreground" Value="White"/>
@@ -26,7 +26,7 @@
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
 
-        <!-- Secondary Button (Hours Worked Log and Refresh button styles) -->
+        <!-- Secondary Button -->
         <Style x:Key="SecondaryButton" TargetType="Button">
             <Setter Property="Background" Value="#F2F2F2"/>
             <Setter Property="Foreground" Value="#333333"/>
@@ -36,7 +36,7 @@
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
 
-        <!-- Upload Button (Styles) -->
+        <!-- Upload Button -->
         <Style x:Key="UploadButton" TargetType="Button">
             <Setter Property="Background" Value="#3498DB"/>
             <Setter Property="Foreground" Value="White"/>
@@ -46,7 +46,7 @@
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
 
-        <!-- NEW: Back to Main Menu (Navigation button styles) -->
+        <!-- NEW: Back to Main Menu -->
         <Style x:Key="HomeButton" TargetType="Button">
             <Setter Property="Background" Value="#3498DB"/>
             <Setter Property="Foreground" Value="White"/>
@@ -103,8 +103,8 @@
 
         <TabControl Grid.Row="1" BorderBrush="#DDDDDD" BorderThickness="1">
 
-            <!-- TAB 1: SUBMIT NEW CLAIM -->
-
+            <!-- Tab 1: Submit New Claim -->
+            
             <TabItem Header="Submit New Claim">
                 <Grid Margin="20">
                     <Grid.RowDefinitions>
@@ -129,7 +129,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <!-- LEFT COLUMN: Input Form and Current Hours DataGrid -->
+                        <!-- Left Column: Input Form and Current Hours DataGrid -->
                         <StackPanel Grid.Column="0">
 
                             <!-- Claim Period Selection -->
@@ -141,7 +141,6 @@
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0" Margin="0,0,10,0">
                                         <TextBlock Text="Month" Margin="0,0,0,5"/>
-                                        <!-- BINDING: SelectedMonth property -->
                                         <ComboBox SelectedIndex="{Binding SelectedMonth, Mode=TwoWay}" Padding="5">
                                             <ComboBoxItem Content="January"/>
                                             <ComboBoxItem Content="February"/>
@@ -159,7 +158,6 @@
                                     </StackPanel>
                                     <StackPanel Grid.Column="1">
                                         <TextBlock Text="Year" Margin="0,0,0,5"/>
-                                        <!-- BINDING: SelectedYear property -->
                                         <TextBox Text="{Binding SelectedYear, UpdateSourceTrigger=PropertyChanged}" Padding="5"/>
                                     </StackPanel>
                                 </Grid>
@@ -176,7 +174,6 @@
                                     </Grid.RowDefinitions>
 
                                     <TextBlock Grid.Row="0" Text="Date Worked" Margin="0,0,0,5"/>
-                                    <!-- BINDING: NewHourEntry.DateWorked -->
                                     <DatePicker Grid.Row="1" SelectedDate="{Binding NewHourEntry.DateWorked}" Margin="0,0,0,10"/>
 
                                     <Grid Grid.Row="2">
@@ -186,17 +183,14 @@
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Margin="0,0,10,0">
                                             <TextBlock Text="Hours (e.g., 8.0)" Margin="0,0,0,5"/>
-                                            <!-- BINDING: NewHourEntry.Hours -->
                                             <TextBox Text="{Binding NewHourEntry.Hours, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Width="100" HorizontalAlignment="Left" Padding="5"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1">
                                             <TextBlock Text="Description" Margin="0,0,0,5"/>
-                                            <!-- BINDING: NewHourEntry.Description -->
                                             <TextBox Text="{Binding NewHourEntry.Description, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Padding="5"/>
                                         </StackPanel>
                                     </Grid>
 
-                                    <!-- BINDING: AddHoursCommand -->
                                     <Button Grid.Row="3" Content="Add Entry to Log" Command="{Binding AddHoursCommand}" Style="{StaticResource SecondaryButton}" HorizontalAlignment="Right" Margin="0,15,0,0"/>
                                 </Grid>
                             </GroupBox>
@@ -220,7 +214,6 @@
                                         <DataGridTemplateColumn Header="Action" Width="Auto">
                                             <DataGridTemplateColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <!-- BINDING: RemoveHoursCommand -->
                                                     <Button Content="Remove" 
                                                             Command="{Binding DataContext.RemoveHoursCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
                                                             CommandParameter="{Binding}"
@@ -233,13 +226,11 @@
                             </GroupBox>
                         </StackPanel>
 
-                        <!-- RIGHT COLUMN: Supporting Documents -->
+                        <!-- Right Column: Supporting Documents -->
                         <GroupBox Grid.Column="2" Header="2. Supporting Documents" FontWeight="Bold" FontSize="16" Foreground="#333333" Style="{StaticResource StandardGroupBox}">
                             <StackPanel Margin="10">
-                                <!-- BINDING: UploadDocumentCommand -->
                                 <Button Content="Upload Document (PDF, DOCX, XLSX)" Command="{Binding UploadDocumentCommand}" Style="{StaticResource UploadButton}" HorizontalAlignment="Stretch" Margin="0,0,0,15"/>
                                 <TextBlock Text="Uploaded Files (Max 5MB per file):" FontStyle="Italic" Margin="0,0,0,5" Foreground="#666666"/>
-                                <!-- BINDING: CurrentDocuments -->
                                 <ListBox ItemsSource="{Binding CurrentDocuments}" MinHeight="300" DisplayMemberPath="FileName" BorderBrush="#CCCCCC" BorderThickness="1"/>
                             </StackPanel>
                         </GroupBox>
@@ -247,13 +238,12 @@
 
                     <!-- Submit Button -->
                     <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,30,0,0">
-                        <!-- BINDING: SubmitClaimCommand -->
                         <Button Content="Submit Claim" Command="{Binding SubmitClaimCommand}" Style="{StaticResource PrimaryButton}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
 
-            <!-- TAB 2: CLAIM HISTORY & STATUS TRACKING -->
+            <!-- Tab 2: Claim History & Status Tracking -->
             <TabItem Header="Claim History &amp; Status Tracking">
                 <Grid Margin="20">
                     <Grid.RowDefinitions>

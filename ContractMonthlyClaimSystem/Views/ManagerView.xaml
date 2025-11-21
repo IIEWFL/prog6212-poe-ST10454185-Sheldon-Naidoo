@@ -13,7 +13,6 @@
         WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
-        <!-- Standard converter, always available in WPF -->
         <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
     </Window.Resources>
 
@@ -23,7 +22,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- HEADER/NAVBAR -->
+        <!-- Header -->
         <Border Grid.Row="0" Background="#2C3E50" Padding="20,10">
             <Grid>
                 <TextBlock Text="Contract Claim Manager Dashboard"
@@ -49,12 +48,12 @@
             <StackPanel Grid.Column="0" Margin="0,0,20,0">
                 <TextBlock Text="Claims for Review" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10" Foreground="#2C3E50"/>
 
-                <!-- Search Box (Simple Styling) -->
+                <!-- Search Box -->
                 <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
                          Padding="8" BorderThickness="1" BorderBrush="#CCCCCC" 
                          Background="White" Margin="0,0,0,10"/>
 
-                <!-- Claims Data Grid (Simple Styling) -->
+                <!-- Claims Data Grid -->
                 <DataGrid ItemsSource="{Binding FilteredClaims}"
                           SelectedItem="{Binding SelectedClaim}"
                           AutoGenerateColumns="False"
@@ -75,21 +74,12 @@
             <!-- Column 2: Selected Claim Details and No Selection Message -->
             <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
                 <Grid>
-                    <!-- Claim Details (Visible when SelectedClaim is NOT null) -->
+                    <!-- Claim Details -->
                     <StackPanel x:Name="ClaimDetailsPanel">
-                        <!--
-                        Visibility logic fix: We bind the Visibility of the panel directly.
-                        Since we are checking if SelectedClaim is NOT null, we use a DataTrigger
-                        that sets visibility to Collapsed ONLY IF the SelectedClaim IS null.
-                        If SelectedClaim is not null, the default Visibility (which is Visible) will apply.
-                        We can use a simple converter, but using a DataTrigger is cleaner here.
-                        -->
                         <StackPanel.Style>
                             <Style TargetType="StackPanel">
                                 <Setter Property="Visibility" Value="Visible"/>
                                 <Style.Triggers>
-                                    <!-- If SelectedClaim is null, collapse the panel -->
-                                    <!-- FIX: Simplified the trigger to only check for {x:Null} -->
                                     <DataTrigger Binding="{Binding SelectedClaim}" Value="{x:Null}">
                                         <Setter Property="Visibility" Value="Collapsed"/>
                                     </DataTrigger>
@@ -175,9 +165,6 @@
 
                             <!-- Manager Actions -->
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
-                                <!-- Note: The Commands (Reject/Approve) rely on CanExecute logic in the ViewModel 
-                                     to ensure they can only be clicked when the current status allows. -->
-
                                 <Button Content="Reject Claim"
                                         Command="{Binding ElementName=LayoutRoot, Path=DataContext.RejectCommand}"
                                         CommandParameter="{Binding ClaimID}"
@@ -196,7 +183,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <!-- No Claim Selected Message (Visible when SelectedClaim is null) -->
+                    <!-- No Claim Selected Message -->
                     <TextBlock Text="← Please select a claim to view details and take action."
                                Foreground="#888888"
                                HorizontalAlignment="Center"

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 
-namespace ContractMonthlyClaimSystem.ViewModels // <--- Added the required namespace here
+namespace ContractMonthlyClaimSystem.ViewModels 
 {
     // A helper method to raise the PropertyChanged and RequestClose event.
     public class ViewModelBase : INotifyPropertyChanged
@@ -17,7 +17,7 @@ namespace ContractMonthlyClaimSystem.ViewModels // <--- Added the required names
         // Event for INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // Part 2: NEW Code
+        // Part 2
         // Event for Navigation/Window Management
         public event EventHandler RequestClose;
 
@@ -42,7 +42,7 @@ namespace ContractMonthlyClaimSystem.ViewModels // <--- Added the required names
             return true;
         }
 
-        // Part 2: NEW Code
+        // Part 2
         // Method to signal the View to close the current window
         protected void CloseView()
         {

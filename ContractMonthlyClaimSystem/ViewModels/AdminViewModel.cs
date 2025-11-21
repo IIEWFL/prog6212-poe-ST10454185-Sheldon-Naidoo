@@ -21,7 +21,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/how-to-implement-property-change-notification
         // Microsoft Learn
 
-        // Part 2: NEW Code
+        // Part 2
         // Action to signal the View to close the Window (AdminView)
         public Action CloseWindowAction { get; set; }
 
@@ -40,7 +40,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
         private Claims selectedClaim;
 
-        // Part 2: UPDATED Code
+        // Part 2
         // When a new claim is selected, it asynchronously loads its associated hours and documents.
         public Claims SelectedClaim
         {
@@ -86,7 +86,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // Part 2: UPDATED Code
+        // Part 2
         // Binds to the GUI
         private ObservableCollection<HoursWorked> selectedClaimHours;
         public ObservableCollection<HoursWorked> SelectedClaimHours
@@ -118,7 +118,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
         public ICommand ApproveClaimCommand { get; }
         public ICommand RejectClaimCommand { get; }
 
-        // Part 2: NEW Code
+        // Part 2
         public ICommand GoHomeCommand { get; }
 
         // Constructor for ViewModel
@@ -129,12 +129,12 @@ namespace ContractMonthlyClaimSystem.ViewModels
             SelectedClaimHours = new ObservableCollection<HoursWorked>();
             SelectedClaimDocuments = new ObservableCollection<SupportingDocument>();
 
-            // Initialize the Approve and Reject commands.
-            // The commands will only be executable if a claim is currently selected.
+            // Initializes the Approve and Reject commands.
+            // Commands will only be executed if a claim is currently selected.
             ApproveClaimCommand = new RelayCommand(async _ => await ApproveClaimAsync(), _ => SelectedClaim != null);
             RejectClaimCommand = new RelayCommand(async _ => await RejectClaimAsync(), _ => SelectedClaim != null);
 
-            // Part 2: NEW Code
+            // Part 2
             // Command for navigation
             GoHomeCommand = new RelayCommand(_ => ExecuteGoHome());
 
@@ -143,7 +143,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             Task.Run(LoadPendingClaimsAsync);
         }
 
-        // Part 2: NEW Code
+        // Part 2
         // Method that executes the logic in the AdminView for the 'Back to Main Menu' button
         private void ExecuteGoHome()
         {
@@ -151,7 +151,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             CloseWindowAction?.Invoke();
         }
 
-        // Part 2: NEW Code
+        // Part 2
         // A handler method that is triggered when a new claim is submitted by the LecturerView
         private void OnClaimSubmitted(Claims newClaim)
         {
@@ -182,7 +182,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // Part 2: UPDATED Code
+        // Part 2
         // Asynchronous method to load all pending claims from the service.
         private async Task LoadPendingClaimsAsync()
         {
@@ -203,7 +203,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             });
         }
 
-        // Part 2: UPDATED Code
+        // Part 2
         // Asynchronous method to approve the selected claim.
         private async Task ApproveClaimAsync()
         {
@@ -224,7 +224,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // Part 2: UPDATED Code
+        // Part 2
         // Asynchronous method to reject the selected claim.
         private async Task RejectClaimAsync()
         {
@@ -241,7 +241,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // Part 2: NEW Code
+        // Part 2
         ~AdminViewModel()
         {
             // Used to exit the Messenger method

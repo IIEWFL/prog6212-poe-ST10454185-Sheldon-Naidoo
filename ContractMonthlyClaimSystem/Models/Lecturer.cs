@@ -23,11 +23,11 @@ namespace ContractMonthlyClaimSystem.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal HourlyRate { get; set; }
 
-        // NEW
+        // NEW Code
         [Required, MaxLength(50)]
         public string Role { get; set; } = "Lecturer";
 
-        // NEW
+        // NEW Code
         [Required]
         public string Email { get; set; }
 

@@ -21,7 +21,7 @@ namespace ContractMonthlyClaimSystem.Models
         [Required]
         public int ClaimID { get; set; }
 
-        // NEW
+        // NEW Code
         public virtual Claims Claim { get; set; }
     }
 }

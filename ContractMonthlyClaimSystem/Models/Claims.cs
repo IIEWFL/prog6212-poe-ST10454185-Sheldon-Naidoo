@@ -57,12 +57,13 @@ namespace ContractMonthlyClaimSystem.Models
         [NotMapped]
         public string LecturerName { get; set; }
 
-        // NEW: Property to support Manager Dashboard detailed view
+        // Part 3: NEW Code
         [NotMapped]
         public string LecturerEmail { get; set; }
 
         [NotMapped]
         public string MonthYearDisplay { get; set; }
+
         [NotMapped]
         private string _statusName;
         [NotMapped]
@@ -74,7 +75,7 @@ namespace ContractMonthlyClaimSystem.Models
                 if (_statusName != value)
                 {
                     _statusName = value;
-                    OnPropertyChanged(); // Manual INPC call
+                    OnPropertyChanged();
                 }
             }
         }
@@ -86,11 +87,11 @@ namespace ContractMonthlyClaimSystem.Models
             get => _hoursWorked;
             set
             {
-                // Note: ObservableCollection must be used here and must be initialized from the service
+                // ObservableCollection is used here and initialized from the service
                 if (_hoursWorked != value)
                 {
                     _hoursWorked = value;
-                    OnPropertyChanged(); // Manual INPC call
+                    OnPropertyChanged();
                 }
             }
         }
@@ -105,7 +106,7 @@ namespace ContractMonthlyClaimSystem.Models
                 if (_supportingDocuments != value)
                 {
                     _supportingDocuments = value;
-                    OnPropertyChanged(); // Manual INPC call
+                    OnPropertyChanged();
                 }
             }
         }

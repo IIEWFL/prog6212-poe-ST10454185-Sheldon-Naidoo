@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace ContractMonthlyClaimSystem.ViewModels
 {
-    // HR is responsible for final payment processing of approved claims.
+    // Part 3: NEW Code
     public class HRViewModel : ViewModelBase
     {
         public Action CloseWindowAction { get; set; }
@@ -19,7 +19,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
         private readonly ClaimService claimService;
         private readonly RelayCommand _processPaymentCommand;
 
-        // NEW: Property to hold available statuses for the ComboBox
+        // Property to hold available statuses for the ComboBox
         private List<ClaimStatus> _availableStatuses;
         public List<ClaimStatus> AvailableStatuses
         {
@@ -36,7 +36,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             {
                 _allClaims = value;
                 OnPropertyChanged();
-                // Automatically update the filtered list when the main list changes
+                // Automatically updates the filtered list when the main list changes
                 FilterClaims();
             }
         }
@@ -53,7 +53,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // --- Filtering/Search Properties ---
+        // Filtering/Search Properties
         private string _searchText;
         public string SearchText
         {
@@ -66,7 +66,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // The default view for HR should only show APPROVED claims (Status ID 4)
+        // Used to show the Approved claims in the Default view for the HRView
         private int? _selectedStatusId = 4;
         public int? SelectedStatusId
         {
@@ -79,7 +79,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // --- Detail View Properties ---
+        // Detail View Properties
         private Claims _selectedClaim;
         public Claims SelectedClaim
         {
@@ -89,7 +89,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
                 _selectedClaim = value;
                 OnPropertyChanged();
 
-                // Load details when a claim is selected
+                // Loads details when a claim is selected
                 if (value != null)
                 {
                     Task.Run(LoadClaimDetailsAsync);
@@ -119,7 +119,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             set { _claimDocuments = value; OnPropertyChanged(); }
         }
 
-        // --- Commands ---
+        // Commands
         public ICommand LoadClaimsCommand { get; }
         public ICommand ProcessPaymentCommand => _processPaymentCommand;
         public ICommand GoHomeCommand { get; }
@@ -131,27 +131,28 @@ namespace ContractMonthlyClaimSystem.ViewModels
             _allClaims = new ObservableCollection<Claims>();
             _filteredClaims = new ObservableCollection<Claims>();
 
-            // Initialize commands
+            // Initializes commands
             LoadClaimsCommand = new RelayCommand(async _ => await LoadAllClaimsAsync());
             GoHomeCommand = new RelayCommand(_ => CloseWindowAction?.Invoke());
 
-            // Process Payment command can only execute if a claim is selected AND it is currently Approved (StatusID = 4)
-            // It changes the status to 5 (Completed/Paid)
+            // Process Payment command can only execute if a claim is selected AND is currently Approved.
+            // Changes the claim status to Completed/Paid
             _processPaymentCommand = new RelayCommand(
                 async _ => await UpdateClaimStatusAsync(5, "Completed/Paid"),
                 _ => SelectedClaim != null && SelectedClaim.StatusID == 4);
 
-            // Load claims and statuses on startup
+            // Loads claims and statuses on startup
             Task.Run(async () =>
             {
-                await LoadStatusesAsync(); // Load statuses first
-                await LoadAllClaimsAsync(); // Then load claims
+                await LoadStatusesAsync();
+                await LoadAllClaimsAsync(); 
             });
         }
 
-        // --- Core Methods ---
+        // Core Methods
 
-        // NEW: Method to load statuses
+        // Part 3: NEW Code
+        // This method load statuses
         private async Task LoadStatusesAsync()
         {
             try
@@ -168,21 +169,22 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // Loads all claims from the service (or claims relevant to the HR role)
+        // Part 3: NEW Code
+        // Loads all claims from the service
         private async Task LoadAllClaimsAsync()
         {
             try
             {
-                // Fetch claims relevant to HR (e.g., all claims that are currently StatusID 4 - Approved)
+                // Fetches claims relevant to HR
                 var claimsList = await claimService.GetAllClaims();
 
                 foreach (var claim in claimsList)
                 {
-                    // Fetch lecturer details for calculating total amount
+                    // Fetches lecturer details for calculating total amount
                     var lecturer = await claimService.GetLecturerById(claim.LecturerID);
                     decimal rate = lecturer?.HourlyRate ?? 500.00m;
 
-                    // Recalculate Total Amount 
+                    // Recalculates Total Amount 
                     claim.TotalAmount = (await claimService.GetHoursWorkedByClaim(claim.ClaimID)).Sum(h => (decimal)h.Hours) * rate;
                 }
 
@@ -197,6 +199,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
+        // Part 3: NEW Code
         // Filters the claims based on the current search text and status ID
         private void FilterClaims()
         {
@@ -204,13 +207,13 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
             var filtered = AllClaims.AsEnumerable();
 
-            // 1. Filter by Status (Defaults to 4: Approved)
+            // Filters by Status
             if (SelectedStatusId.HasValue && SelectedStatusId.Value > 0)
             {
                 filtered = filtered.Where(c => c.StatusID == SelectedStatusId.Value);
             }
 
-            // 2. Filter by Search Text
+            // Filters by Search Text
             if (!string.IsNullOrWhiteSpace(SearchText))
             {
                 string searchLower = SearchText.ToLower();
@@ -246,12 +249,12 @@ namespace ContractMonthlyClaimSystem.ViewModels
             }
         }
 
-        // Updates the status of the selected claim (5 for Completed/Paid)
+        // Updates the status of the selected claim
         private async Task UpdateClaimStatusAsync(int newStatusId, string statusName)
         {
             if (SelectedClaim == null) return;
 
-            // Optional: Add a confirmation dialog for payment processing here
+            // Adds a confirmation dialog for payment processing here
             var result = System.Windows.MessageBox.Show(
                 $"Are you sure you want to mark Claim {SelectedClaim.ClaimID} as '{statusName}' (Payment Processed)? This action cannot be undone.",
                 "Confirm Payment Process",
@@ -263,21 +266,20 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
             try
             {
-                // This is the core automation step: updating the final status
                 bool success = await claimService.UpdateClaimStatus(SelectedClaim.ClaimID, newStatusId);
 
                 if (success)
                 {
                     System.Windows.MessageBox.Show($"Claim {SelectedClaim.ClaimID} payment has been successfully processed and marked as {statusName}.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                    // Force UI update and reload the list to remove the processed item
+                    // Forces the UI update and reload the list to remove the processed item
                     SelectedClaim.StatusID = newStatusId;
                     SelectedClaim.StatusName = await claimService.GetStatusNameById(newStatusId);
 
-                    // Reload the full list to update the FilteredClaims (which typically only shows status 4)
+                    // Reloads the full list to update the FilteredClaims
                     await LoadAllClaimsAsync();
 
-                    // Clear the selection after action
+                    // Clears the selection after action
                     SelectedClaim = null;
                 }
                 else
