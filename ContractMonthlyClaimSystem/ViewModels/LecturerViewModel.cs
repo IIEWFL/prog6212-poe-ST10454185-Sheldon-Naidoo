@@ -335,7 +335,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
     {
         private DateTime _dateWorked = DateTime.Today;
 
-        [Required(ErrorMessage = "Date is required.")]
+        [Required]
         public DateTime DateWorked
         {
             get => _dateWorked;
@@ -347,7 +347,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
         }
 
         private double _hours;
-        [Required(ErrorMessage = "Hours are required.")]
+        [Required]
         [Range(0.1, 24.0, ErrorMessage = "Hours must be greater than zero.")]
         public double Hours
         {
@@ -360,8 +360,7 @@ namespace ContractMonthlyClaimSystem.ViewModels
         }
 
         private string _description;
-        [Required(ErrorMessage = "Description is required.")]
-        [MaxLength(255)]
+        [Required]
         public string Description
         {
             get => _description;
