@@ -31,6 +31,8 @@ namespace ContractMonthlyClaimSystem.Views
                 // Action that the ViewModel triggers when GoHomeCommand runs
                 viewModel.CloseWindowAction = () =>
                 {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
                     this.Close(); // Closes the LecturerView window
                 };
             }

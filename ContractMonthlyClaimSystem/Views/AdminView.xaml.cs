@@ -31,6 +31,8 @@ namespace ContractMonthlyClaimSystem.Views
                 // Action property that calls for the Close method
                 viewModel.CloseWindowAction = () =>
                 {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
                     this.Close(); // The View closes itself
                 };
             }

@@ -33,5 +33,16 @@
         <Button Content="Launch Admin View" 
                 Click="LaunchAdminView_Click" 
                 Background="#2ECC71"/>
+
+        <!-- NEW: Button to launch ManagerView -->
+        <Button Content="Launch Manager View" 
+                Click="LaunchManagerView_Click"
+                Background="#E67E22"/>
+
+        <!-- NEW: Button to launch HRView -->
+        <Button Content="Launch HR View (Payment Processing)" 
+                Click="LaunchHRView_Click"
+                Background="#9B59B6"/>
+        
     </StackPanel>
 </Window>

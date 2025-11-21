@@ -24,7 +24,15 @@ namespace ContractMonthlyClaimSystem.Views
         {
             InitializeComponent();
 
-            this.DataContext = new HRViewModel();
+            HRViewModel viewModel = new HRViewModel();
+            this.DataContext = viewModel;
+
+            viewModel.CloseWindowAction = () =>
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            };
         }
     }
 }

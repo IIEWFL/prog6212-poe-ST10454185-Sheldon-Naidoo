@@ -37,7 +37,15 @@ namespace ContractMonthlyClaimSystem.Views
 
             // 4. Subscribe to the RequestClose event from the ViewModelBase.
             // This allows the ViewModel (e.g., GoHomeCommand) to trigger the View to close itself.
-            viewModel.RequestClose += (sender, e) => this.Close();
+            viewModel.RequestClose += (sender, e) =>
+            {
+                // 1. Open the main selection window
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+
+                // 2. Close the current ManagerView window
+                this.Close();
+            };
         }
     }
 }
