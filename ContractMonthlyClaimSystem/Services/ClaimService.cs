@@ -34,9 +34,16 @@ namespace ContractMonthlyClaimSystem.Services
             claimStatusList.Add(new ClaimStatus { StatusID = 2, StatusName = "Rejected" });
             claimStatusList.Add(new ClaimStatus { StatusID = 3, StatusName = "Pending Review" });
             claimStatusList.Add(new ClaimStatus { StatusID = 4, StatusName = "Approved" });
+            claimStatusList.Add(new ClaimStatus { StatusID = 5, StatusName = "Completed/Paid" });
 
             // Part 2: NEW Code
             SetupMockClaims();
+        }
+
+        // NEW METHOD: Fixes CS1061 error by defining the required method
+        public async Task<List<ClaimStatus>> GetAllStatuses()
+        {
+            return await Task.FromResult(claimStatusList.ToList());
         }
 
         // Part 2: NEW Code

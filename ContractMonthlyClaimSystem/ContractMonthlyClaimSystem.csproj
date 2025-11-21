@@ -186,6 +186,7 @@
     <Compile Include="Services\ClaimService.cs" />
     <Compile Include="Tests\ClaimServiceTest.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\HRViewModel.cs" />
     <Compile Include="ViewModels\LecturerViewModel.cs" />
     <Compile Include="ViewModels\ManagerViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
@@ -195,6 +196,9 @@
     </Compile>
     <Compile Include="Views\ClaimSubmission.xaml.cs">
       <DependentUpon>ClaimSubmission.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HRView.xaml.cs">
+      <DependentUpon>HRView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LecturerView.xaml.cs">
       <DependentUpon>LecturerView.xaml</DependentUpon>
@@ -219,6 +223,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ClaimSubmission.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HRView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
