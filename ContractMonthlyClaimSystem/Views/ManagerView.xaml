@@ -1,0 +1,220 @@
+﻿<Window x:Class="ContractMonthlyClaimSystem.Views.ManagerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:vm="clr-namespace:ContractMonthlyClaimSystem.ViewModels"
+        xmlns:local="clr-namespace:ContractMonthlyClaimSystem.Views"
+        mc:Ignorable="d"
+        
+        Title="Academic Manager Dashboard" Height="750" Width="1000"
+        FontFamily="Segoe UI"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <!-- Standard converter, always available in WPF -->
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </Window.Resources>
+
+    <Grid Background="#F0F0F0" x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER/NAVBAR -->
+        <Border Grid.Row="0" Background="#2C3E50" Padding="20,10">
+            <Grid>
+                <TextBlock Text="Contract Claim Manager Dashboard"
+                           Foreground="White" FontSize="20" FontWeight="Bold"
+                           VerticalAlignment="Center"/>
+                <Button Content="Go Home"
+                        Command="{Binding GoHomeCommand}"
+                        Background="#3498DB" Foreground="White" 
+                        Padding="10,5" FontWeight="SemiBold"
+                        BorderThickness="0"
+                        HorizontalAlignment="Right"/>
+            </Grid>
+        </Border>
+
+        <!-- Main Content Grid -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3.5*"/>
+                <ColumnDefinition Width="6.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Column 1: Claims List -->
+            <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                <TextBlock Text="Claims for Review" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10" Foreground="#2C3E50"/>
+
+                <!-- Search Box (Simple Styling) -->
+                <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
+                         Padding="8" BorderThickness="1" BorderBrush="#CCCCCC" 
+                         Background="White" Margin="0,0,0,10"/>
+
+                <!-- Claims Data Grid (Simple Styling) -->
+                <DataGrid ItemsSource="{Binding FilteredClaims}"
+                          SelectedItem="{Binding SelectedClaim}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          MaxHeight="650"
+                          BorderBrush="#CCCCCC"
+                          BorderThickness="1"
+                          RowHeaderWidth="0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Lecturer" Binding="{Binding LecturerName}" Width="2*"/>
+                        <DataGridTextColumn Header="Month" Binding="{Binding MonthYearDisplay}" Width="*"/>
+                        <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount, StringFormat=C}" Width="*"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding StatusName}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+
+            <!-- Column 2: Selected Claim Details and No Selection Message -->
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <!-- Claim Details (Visible when SelectedClaim is NOT null) -->
+                    <StackPanel x:Name="ClaimDetailsPanel">
+                        <!--
+                        Visibility logic fix: We bind the Visibility of the panel directly.
+                        Since we are checking if SelectedClaim is NOT null, we use a DataTrigger
+                        that sets visibility to Collapsed ONLY IF the SelectedClaim IS null.
+                        If SelectedClaim is not null, the default Visibility (which is Visible) will apply.
+                        We can use a simple converter, but using a DataTrigger is cleaner here.
+                        -->
+                        <StackPanel.Style>
+                            <Style TargetType="StackPanel">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <Style.Triggers>
+                                    <!-- If SelectedClaim is null, collapse the panel -->
+                                    <!-- FIX: Simplified the trigger to only check for {x:Null} -->
+                                    <DataTrigger Binding="{Binding SelectedClaim}" Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Style>
+
+                        <StackPanel DataContext="{Binding SelectedClaim}">
+
+                            <!-- Claim Summary -->
+                            <Border Background="White" CornerRadius="6" Padding="15" Margin="0,0,0,15" BorderBrush="#BDC3C7" BorderThickness="1">
+                                <StackPanel>
+                                    <TextBlock Text="Claim Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="#34495E"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Lecturer Name:" FontWeight="SemiBold" Margin="0,5,5,5"/>
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding LecturerName}" Margin="5,5,10,5"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="2" Text="Email:" FontWeight="SemiBold" Margin="10,5,5,5"/>
+                                        <TextBlock Grid.Row="0" Grid.Column="3" Text="{Binding LecturerEmail}" Margin="5,5"/>
+
+                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Claim Month:" FontWeight="SemiBold" Margin="0,5,5,5"/>
+                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding MonthYearDisplay}" Margin="5,5,10,5"/>
+
+                                        <TextBlock Grid.Row="1" Grid.Column="2" Text="Total Amount:" FontWeight="SemiBold" Margin="10,5,5,5"/>
+                                        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding TotalAmount, StringFormat=C}" FontWeight="Bold" Foreground="#27AE60" Margin="5,5"/>
+
+                                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Status:" FontWeight="SemiBold" Margin="0,5,5,5"/>
+                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding StatusName}" FontWeight="Bold" Foreground="#3498DB" Margin="5,5,10,5"/>
+
+                                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Submission Date:" FontWeight="SemiBold" Margin="0,5,5,5"/>
+                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding SubmissionDate, StringFormat='dd/MM/yyyy'}" Margin="5,5,10,5"/>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Hours Breakdown -->
+                            <Border Background="White" CornerRadius="6" Padding="15" Margin="0,0,0,15" BorderBrush="#BDC3C7" BorderThickness="1">
+                                <StackPanel>
+                                    <TextBlock Text="Hours Breakdown" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="#34495E"/>
+                                    <DataGrid ItemsSource="{Binding HoursWorked}"
+                                              AutoGenerateColumns="False"
+                                              IsReadOnly="True"
+                                              MaxHeight="180"
+                                              RowHeaderWidth="0">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Date" Binding="{Binding DateWorked, StringFormat='dd/MM/yyyy'}" Width="*"/>
+                                            <DataGridTextColumn Header="Hours" Binding="{Binding Hours}" Width="*"/>
+                                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="2*"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Supporting Documents -->
+                            <Border Background="White" CornerRadius="6" Padding="15" Margin="0,0,0,15" BorderBrush="#BDC3C7" BorderThickness="1">
+                                <StackPanel>
+                                    <TextBlock Text="Supporting Documents" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="#34495E"/>
+                                    <DataGrid ItemsSource="{Binding SupportingDocuments}"
+                                              AutoGenerateColumns="False"
+                                              IsReadOnly="True"
+                                              MaxHeight="150"
+                                              RowHeaderWidth="0">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="File Name" Binding="{Binding FileName}" Width="2*"/>
+                                            <DataGridTextColumn Header="Type" Binding="{Binding FileType}" Width="*"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Manager Actions -->
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+                                <!-- Note: The Commands (Reject/Approve) rely on CanExecute logic in the ViewModel 
+                                     to ensure they can only be clicked when the current status allows. -->
+
+                                <Button Content="Reject Claim"
+                                        Command="{Binding ElementName=LayoutRoot, Path=DataContext.RejectCommand}"
+                                        CommandParameter="{Binding ClaimID}"
+                                        Background="#E74C3C" Foreground="White"
+                                        Padding="10,5" FontWeight="SemiBold"
+                                        BorderThickness="0" 
+                                        Margin="0,0,10,0"/>
+
+                                <Button Content="Approve Claim"
+                                        Command="{Binding ElementName=LayoutRoot, Path=DataContext.ApproveCommand}"
+                                        CommandParameter="{Binding ClaimID}"
+                                        Background="#27AE60" Foreground="White"
+                                        Padding="10,5" FontWeight="SemiBold"
+                                        BorderThickness="0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- No Claim Selected Message (Visible when SelectedClaim is null) -->
+                    <TextBlock Text="← Please select a claim to view details and take action."
+                               Foreground="#888888"
+                               HorizontalAlignment="Center"
+                               Margin="0,150,0,0">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <!-- If SelectedClaim is null, make visible -->
+                                    <DataTrigger Binding="{Binding SelectedClaim}" Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,168 @@
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe.config
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.pdb
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.AssemblyReference.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\MainWindow.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\App.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.lref
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\MainWindow.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.g.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.Properties.Resources.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.GenerateResource.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.CoreCompileInputs.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part-1\prog6212-part-1-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.pdb
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe.config
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.pdb
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.AssemblyReference.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.exe.config
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\MainWindow.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\App.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.lref
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\MainWindow.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.g.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.Properties.Resources.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.GenerateResource.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.CoreCompileInputs.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.pdb
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe.config
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.pdb
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.AssemblyReference.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.exe.config
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\MainWindow.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\App.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.lref
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\MainWindow.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.g.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.Properties.Resources.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.GenerateResource.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.CoreCompileInputs.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\PROG6212-POE-Part2\prog6212-part-2-ST10454185-Sheldon-Naidoo\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.pdb
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe.config
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\ContractMonthlyClaimSystem.pdb
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authorization.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Routing.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.ObjectPool.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Net.Http.Headers.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Buffers.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Memory.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Text.Encodings.Web.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.ValueTuple.dll
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authorization.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Routing.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.AspNetCore.WebUtilities.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Diagnostics.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.ObjectPool.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Microsoft.Net.Http.Headers.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\Newtonsoft.Json.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Buffers.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Memory.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Text.Encodings.Web.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\bin\Debug\System.ValueTuple.xml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.AssemblyReference.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.exe.config
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\MainWindow.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\App.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem_MarkupCompile.lref
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\MainWindow.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\Views\AdminView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\Views\ClaimSubmission.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\Views\LecturerView.baml
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.g.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.Properties.Resources.resources
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.GenerateResource.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.csproj.CoreCompileInputs.cache
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\Contract.9944A6F8.Up2Date
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.exe
+C:\Sheldons Uni work\COMPUTER SCIENCE\YEAR 2\PROG6212\POE Final\ContractMonthlyClaimSystem\obj\Debug\ContractMonthlyClaimSystem.pdb

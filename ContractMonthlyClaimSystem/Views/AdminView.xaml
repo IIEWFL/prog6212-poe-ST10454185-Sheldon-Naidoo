@@ -1,0 +1,177 @@
+﻿<Window x:Class="ContractMonthlyClaimSystem.Views.AdminView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContractMonthlyClaimSystem.ViewModels"
+        mc:Ignorable="d"
+        Title="Administrator Dashboard" Height="700" Width="1200">
+    <Window.DataContext>
+        <local:AdminViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <!-- Approve Button (Button Styles) -->
+        <Style x:Key="ApproveButton" TargetType="Button">
+            <Setter Property="Background" Value="#27AE60"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="25,10"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Reject Button (Button Styles) -->
+        <Style x:Key="RejectButton" TargetType="Button">
+            <Setter Property="Background" Value="#E74C3C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="25,10"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Navigation Button (Styles) -->
+        <Style x:Key="HomeButton" TargetType="Button">
+            <Setter Property="Background" Value="#3498DB"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="15,5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <!-- Main Grid Rows: Header and Content -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>    
+        </Grid.RowDefinitions>
+
+        <!-- Header Content -->
+        <Grid Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Administrator Dashboard" FontSize="30" FontWeight="Bold" Foreground="#2C3E50" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Button Content="← Back to Main Menu" 
+                    HorizontalAlignment="Right" 
+                    Command="{Binding GoHomeCommand}"
+                    Style="{StaticResource HomeButton}"/>
+        </Grid>
+
+        <!-- Main Content Grid (Split into 2 columns) -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/> 
+                <ColumnDefinition Width="2*"/>   
+            </Grid.ColumnDefinitions>
+            
+            <!-- Left Pane: Claims List -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Grid.Row="0" Text="Claims To Be Reviewed" FontSize="24" FontWeight="Bold" Margin="0,0,0,15" Foreground="#333333"/>
+                
+                <DataGrid Grid.Row="1" ItemsSource="{Binding PendingClaims}" 
+                          SelectedItem="{Binding SelectedClaim}" 
+                          IsReadOnly="True" 
+                          AutoGenerateColumns="False" 
+                          Margin="0,0,10,0"
+                          HeadersVisibility="Column"
+                          BorderBrush="#D5DBDB" BorderThickness="1"
+                          SelectionMode="Single">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Lecturer" Binding="{Binding LecturerName}" Width="*"/>
+                        <DataGridTextColumn Header="Month" Binding="{Binding MonthYearDisplay}" Width="*"/>
+                        <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount, StringFormat=C}" Width="1.5*"/>
+                        <DataGridTextColumn Header="Submitted" Binding="{Binding SubmissionDate, StringFormat='{}{0:d}'}" Width="1.5*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+            <!-- Right Pane: Claim Details and Actions Buttons -->
+            <Grid Grid.Column="1" Margin="20,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>    
+                    <RowDefinition Height="Auto"/> 
+                </Grid.RowDefinitions>
+                
+                <!-- Title -->
+                <TextBlock Grid.Row="0" Text="Selected Claim Details" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" Foreground="#333333"/>
+
+                <!-- Details Container -->
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    <Border BorderBrush="#D5DBDB" 
+                            BorderThickness="1" 
+                            CornerRadius="8" 
+                            Padding="25" 
+                            Background="#F8F9F9">
+
+                        <StackPanel DataContext="{Binding SelectedClaim}">
+                            <TextBlock Text="Claim Summary" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,15" Foreground="#1E8449"/>
+                            <TextBlock Text="{Binding TotalAmount, StringFormat='Total Claim Amount: {0:C}'}" FontSize="24" FontWeight="ExtraBold" Foreground="#1E8449" Margin="0,0,0,20"/>
+
+                            <TextBlock Text="Hours Breakdown" FontWeight="Bold" Margin="0,15,0,5" FontSize="16"/>
+                            <DataGrid ItemsSource="{Binding DataContext.SelectedClaimHours, RelativeSource={RelativeSource AncestorType=Grid}}" 
+                                      Height="180" 
+                                      AutoGenerateColumns="True" 
+                                      IsReadOnly="True" 
+                                      BorderBrush="#CCCCCC" BorderThickness="1"/>
+
+                            <TextBlock Text="Supporting Documents" FontWeight="Bold" Margin="0,20,0,5" FontSize="16"/>
+                            <ListBox ItemsSource="{Binding DataContext.SelectedClaimDocuments, RelativeSource={RelativeSource AncestorType=Grid}}" 
+                                     Height="100" 
+                                     DisplayMemberPath="FileName" 
+                                     BorderBrush="#CCCCCC" BorderThickness="1"/>
+                        </StackPanel>
+                    </Border>
+                </ScrollViewer>
+
+                <!-- Approval/Rejection Buttons -->
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,30,0,0">
+                    <Button Content="Reject Claim" 
+                            Command="{Binding RejectClaimCommand}" 
+                            Style="{StaticResource RejectButton}" 
+                            Margin="0,0,20,0"/>
+
+                    <Button Content="Approve Claim" 
+                            Command="{Binding ApproveClaimCommand}" 
+                            Style="{StaticResource ApproveButton}"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
