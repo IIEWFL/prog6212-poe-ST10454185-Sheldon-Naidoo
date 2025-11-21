@@ -14,6 +14,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
     // Part 3: NEW Code
     public class HRViewModel : ViewModelBase
     {
+        // Code Attribution
+        // This method was adapted from Microsoft Learn
+        // https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-9.0
+        // Microsoft Learn
+
         public Action CloseWindowAction { get; set; }
 
         private readonly ClaimService claimService;
@@ -119,7 +124,13 @@ namespace ContractMonthlyClaimSystem.ViewModels
             set { _claimDocuments = value; OnPropertyChanged(); }
         }
 
-        // Commands
+        // Command Properties
+
+        // Code Attribution
+        // This method was adapted from Microsoft Learn
+        // https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand?view=net-9.0
+        // Microsoft Learn
+
         public ICommand LoadClaimsCommand { get; }
         public ICommand ProcessPaymentCommand => _processPaymentCommand;
         public ICommand GoHomeCommand { get; }
@@ -127,6 +138,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Constructor
         public HRViewModel()
         {
+            // Code Attribution
+            // This method was adapted from Microsoft Learn
+            // https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/relaycommand
+            // Microsoft Learn
+
             claimService = new ClaimService();
             _allClaims = new ObservableCollection<Claims>();
             _filteredClaims = new ObservableCollection<Claims>();
@@ -203,6 +219,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Filters the claims based on the current search text and status ID
         private void FilterClaims()
         {
+            // Code Attribution
+            // This method was adapted from Microsoft Learn
+            // https://learn.microsoft.com/en-us/dotnet/csharp/linq/standard-query-operators/filtering-data
+            // Microsoft Learn
+
             if (AllClaims == null) return;
 
             var filtered = AllClaims.AsEnumerable();
@@ -252,6 +273,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Updates the status of the selected claim
         private async Task UpdateClaimStatusAsync(int newStatusId, string statusName)
         {
+            // Code Attribution
+            // This method was adapted from Microsoft Learn
+            // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool
+            // Microsoft Learn
+
             if (SelectedClaim == null) return;
 
             // Adds a confirmation dialog for payment processing here

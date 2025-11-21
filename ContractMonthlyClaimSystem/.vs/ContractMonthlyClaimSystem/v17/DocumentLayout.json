@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\models\\supportingdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:models\\supportingdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\hrviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\hrviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\managerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\managerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\lecturerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\lecturerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|c:\\st10454185_prog6212_poe\\prog6212-poe-st10454185-sheldon-naidoo\\contractmonthlyclaimsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -39,40 +71,8 @@
       "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:views\\adminview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\managerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\managerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\lecturerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\lecturerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\hrviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\hrviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:viewmodels\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\models\\supportingdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|solutionrelative:models\\supportingdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F08E2FA5-95BF-4F86-A5F7-D32839FDAD9E}|ContractMonthlyClaimSystem.csproj|C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\models\\claimstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,34 +117,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADYAAAAgAAAAAAAAAA==",
+              "Title": "SupportingDocument.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Models\\SupportingDocument.cs",
+              "RelativeDocumentMoniker": "Models\\SupportingDocument.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Models\\SupportingDocument.cs",
+              "RelativeToolTip": "Models\\SupportingDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T11:20:28.655Z"
+              "WhenOpened": "2025-11-20T12:40:39.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HRView.xaml",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\HRView.xaml",
-              "RelativeDocumentMoniker": "Views\\HRView.xaml",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\HRView.xaml",
-              "RelativeToolTip": "Views\\HRView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-21T11:50:27.06Z"
+              "DocumentIndex": 0,
+              "Title": "ClaimService.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Services\\ClaimService.cs",
+              "RelativeDocumentMoniker": "Services\\ClaimService.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Services\\ClaimService.cs",
+              "RelativeToolTip": "Services\\ClaimService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T19:21:35.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwEkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T12:03:19.768Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T19:46:35.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HRViewModel.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\HRViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HRViewModel.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\HRViewModel.cs",
+              "RelativeToolTip": "ViewModels\\HRViewModel.cs",
+              "ViewState": "AgIAABIBAAAAAAAAAAAQwBcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T11:48:47.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ManagerViewModel.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ManagerViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ManagerViewModel.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ManagerViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ManagerViewModel.cs",
+              "ViewState": "AgIAABQBAAAAAAAAAAAYwCwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T18:22:57.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LecturerViewModel.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\LecturerViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LecturerViewModel.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\LecturerViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LecturerViewModel.cs",
+              "ViewState": "AgIAAEgBAAAAAAAAAADwv1EBAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T19:13:55.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminViewModel.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\AdminViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdminViewModel.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\AdminViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdminViewModel.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwG8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T19:09:42.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "LecturerView.xaml",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\LecturerView.xaml",
               "RelativeDocumentMoniker": "Views\\LecturerView.xaml",
@@ -155,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -167,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "ManagerView.xaml.cs",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\ManagerView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ManagerView.xaml.cs",
@@ -179,7 +260,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
+              "Title": "HRView.xaml",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\HRView.xaml",
+              "RelativeDocumentMoniker": "Views\\HRView.xaml",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\HRView.xaml",
+              "RelativeToolTip": "Views\\HRView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-21T11:50:27.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T11:20:28.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ManagerView.xaml",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\ManagerView.xaml",
               "RelativeDocumentMoniker": "Views\\ManagerView.xaml",
@@ -190,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "LecturerView.xaml.cs",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\LecturerView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\LecturerView.xaml.cs",
@@ -202,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "AdminView.xaml.cs",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\AdminView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\AdminView.xaml.cs",
@@ -211,42 +315,6 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T14:56:04.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LecturerViewModel.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\LecturerViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LecturerViewModel.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\LecturerViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LecturerViewModel.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAAAYwEwBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T19:13:55.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "HRViewModel.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\HRViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\HRViewModel.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\HRViewModel.cs",
-              "RelativeToolTip": "ViewModels\\HRViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkBAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T11:48:47.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminViewModel.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\AdminViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\AdminViewModel.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\AdminViewModel.cs",
-              "RelativeToolTip": "ViewModels\\AdminViewModel.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAiwPMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T19:09:42.048Z"
             },
             {
               "$type": "Document",
@@ -262,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "HRView.xaml.cs",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\HRView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\HRView.xaml.cs",
@@ -274,19 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ViewModelBase.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ViewModelBase.cs",
-              "RelativeToolTip": "ViewModels\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T19:46:35.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "AdminView.xaml",
               "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Views\\AdminView.xaml",
               "RelativeDocumentMoniker": "Views\\AdminView.xaml",
@@ -294,30 +350,6 @@
               "RelativeToolTip": "Views\\AdminView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-17T20:06:32.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RelayCommand.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\RelayCommand.cs",
-              "RelativeToolTip": "ViewModels\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T12:03:19.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ManagerViewModel.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ManagerViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ManagerViewModel.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\ViewModels\\ManagerViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ManagerViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T18:22:57.083Z"
             },
             {
               "$type": "Document",
@@ -366,30 +398,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T12:37:01.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ClaimService.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Services\\ClaimService.cs",
-              "RelativeDocumentMoniker": "Services\\ClaimService.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Services\\ClaimService.cs",
-              "RelativeToolTip": "Services\\ClaimService.cs",
-              "ViewState": "AgIAAB8BAAAAAAAAAAAmwEIBAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T19:21:35.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SupportingDocument.cs",
-              "DocumentMoniker": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Models\\SupportingDocument.cs",
-              "RelativeDocumentMoniker": "Models\\SupportingDocument.cs",
-              "ToolTip": "C:\\ST10454185_PROG6212_POE\\prog6212-poe-ST10454185-Sheldon-Naidoo\\ContractMonthlyClaimSystem\\Models\\SupportingDocument.cs",
-              "RelativeToolTip": "Models\\SupportingDocument.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:40:39.406Z"
             },
             {
               "$type": "Document",

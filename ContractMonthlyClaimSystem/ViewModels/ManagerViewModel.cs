@@ -14,6 +14,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
     // PART 3: NEW Code
     public class ManagerViewModel : ViewModelBase
     {
+        // Code Attribution
+        // This method was adapted from Microsoft Learn
+        // https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-9.0
+        // Microsoft Learn
+
         // Action delegate to close the Window
         public Action CloseWindowAction { get; set; }
 
@@ -117,6 +122,12 @@ namespace ContractMonthlyClaimSystem.ViewModels
 
         // PART 3: NEW Code
         // Command Properties
+
+        // Code Attribution
+        // This method was adapted from Microsoft Learn
+        // https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand?view=net-9.0
+        // Microsoft Learn
+
         public ICommand LoadClaimsCommand { get; }
         public ICommand ApproveClaimCommand => _approveClaimCommand;
         public ICommand RejectClaimCommand => _rejectClaimCommand;
@@ -127,6 +138,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Constructor
         public ManagerViewModel()
         {
+            // Code Attribution
+            // This method was adapted from Microsoft Learn
+            // https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/relaycommand
+            // Microsoft Learn
+
             claimService = new ClaimService();
             _allClaims = new ObservableCollection<Claims>();
             _filteredClaims = new ObservableCollection<Claims>();
@@ -191,6 +207,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Filters the claims based on the current search text and status ID
         private void FilterClaims()
         {
+            // Code Attribution
+            // This method was adapted from Microsoft Learn
+            // https://learn.microsoft.com/en-us/dotnet/csharp/linq/standard-query-operators/filtering-data
+            // Microsoft Learn
+
             if (AllClaims == null) return;
 
             var filtered = AllClaims.AsEnumerable();
@@ -242,6 +263,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Saves the manager's verification notes and status
         private async Task ExecuteVerifyClaimAsync()
         {
+            // Code Attribution
+            // This method was adapted from Microsoft Learn
+            // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool
+            // Microsoft Learn
+
             if (SelectedClaim == null) return;
 
             try
@@ -268,6 +294,11 @@ namespace ContractMonthlyClaimSystem.ViewModels
         // Updates the status of the selected claim (4 for Approved, 2 for Rejected)
         private async Task UpdateClaimStatusAsync(int newStatusId, string statusName)
         {
+            // Code Attribution
+            // This method was adapted from Microsoft Learn
+            // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool
+            // Microsoft Learn
+
             if (SelectedClaim == null) return;
 
             try
